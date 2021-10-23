@@ -9,7 +9,6 @@ Cola_resultados::Cola_resultados()
 
 void Cola_resultados::encolar(std::pair<int, std::pair<int,int> > par){
     m.lock();
-    //this->cola_resultados.push(par);
     this->vector_resultados.push_back(par);
     m.unlock();
 }
