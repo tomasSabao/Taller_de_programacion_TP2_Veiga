@@ -44,3 +44,5 @@ Como no se puede garantizar el tiempo de ejecución que se le va a asignar a cad
 ### Entregas realizadas en el SERCOM
 ![diagrama_clases](/SERCOM_TP2_entregas.png)
 
+##### Aclaracion
+Entiendo que deberia haber usado un template para la cola de particiones en lugar de generar la clase, pero no me alcanzo el tiempo para refactorizar el codigo con el template. Igualmente lo agrego al repo
