@@ -42,5 +42,5 @@ Como no se puede garantizar el tiempo de ejecución que se le va a asignar a cad
 
 
 ### Entregas realizadas en el SERCOM
-
+![diagrama_clases](/SERCOM_TP2_entregas.png)
 
