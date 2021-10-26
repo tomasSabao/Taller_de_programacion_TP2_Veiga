@@ -13,7 +13,7 @@ class Cola_bloqueante
         Cola_bloqueante();
         virtual ~Cola_bloqueante();
 
-        void encolar(Particion particion);
+        void encolar(Particion &particion);
         Particion desencolar();
     protected:
     private:

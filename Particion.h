@@ -15,13 +15,13 @@ class Particion
             int id_op, int columna, int columnas_dataset);
         virtual ~Particion();
         void agregar_elementos();
-        int procesar(Cola_resultados* cola);
+        const int procesar(Cola_resultados* cola);
     protected:
     private:
-        std::pair<unsigned int ,int> obtener_maximo();
-        std::pair<unsigned int ,int> obtener_minimo();
-        std::pair<unsigned int ,int> obtener_suma();
-        std::pair<unsigned int ,int> obtener_promedio();
+        const std::pair<unsigned int ,int> obtener_maximo();
+        const std::pair<unsigned int ,int> obtener_minimo();
+        const std::pair<unsigned int ,int> obtener_suma();
+        const std::pair<unsigned int ,int> obtener_promedio();
         unsigned int obtener_numero(std::ifstream &archivoAbierto, int fila);
 
         std::string operacion;

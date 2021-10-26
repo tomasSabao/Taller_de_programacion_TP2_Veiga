@@ -11,11 +11,11 @@ class Input_manager
         Input_manager();
         virtual ~Input_manager();
         int leer_linea();
-        int obtener_comienzo();
-        int obtener_fin();
-        int obtener_filas();
-        int obtener_columna();
-        std::string obtener_operacion();
+        const int obtener_comienzo();
+        const int obtener_fin();
+        const int obtener_filas();
+        const int obtener_columna();
+        const std::string obtener_operacion();
     protected:
     private:
     std::string obtener_elemento(int num_elemento);

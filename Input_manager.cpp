@@ -15,27 +15,27 @@ int Input_manager::leer_linea(){
 }
 
 
-int Input_manager::obtener_comienzo(){
+const int Input_manager::obtener_comienzo(){
     std::string palabra = this->obtener_elemento(1);
     return std::stoi(palabra);
 }
 
-int Input_manager::obtener_fin(){
+const int Input_manager::obtener_fin(){
     std::string palabra = this->obtener_elemento(2);
     return std::stoi(palabra);
 }
 
-int Input_manager::obtener_filas(){
+const int Input_manager::obtener_filas(){
     std::string palabra = this->obtener_elemento(3);
     return std::stoi(palabra);
 }
 
-int Input_manager::obtener_columna(){
+const int Input_manager::obtener_columna(){
     std::string palabra = this->obtener_elemento(4);
     return std::stoi(palabra);
 }
 
-std::string Input_manager::obtener_operacion(){
+const std::string Input_manager::obtener_operacion(){
     std::string palabra = this->obtener_elemento(5);
     return palabra;
 }

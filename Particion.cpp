@@ -9,10 +9,8 @@ Particion::Particion(int comienzo, int fin, const char* archivo, const std::stri
     this->id_op = id_op;
     this->columna_a_procesar = columna;
     this->columnas_dataset = columnas_dataset;
-    //ctor
 }
-
-int Particion::procesar(Cola_resultados* cola){
+const int Particion::procesar(Cola_resultados* cola){
     std::pair<unsigned int, int> resultado;
     if (this->operacion=="end"){
         return 1;
@@ -38,7 +36,7 @@ int Particion::procesar(Cola_resultados* cola){
 
 
 
-std::pair<unsigned int ,int> Particion::obtener_maximo(){
+const std::pair<unsigned int ,int> Particion::obtener_maximo(){
     std::ifstream miArchivo(this->archivo_a_procesar, std::ios::binary);
     unsigned int maximo=0;
     for (int i=this->comienzo; i< this->fin; i++){
@@ -55,7 +53,7 @@ std::pair<unsigned int ,int> Particion::obtener_maximo(){
 }
 
 
-std::pair<unsigned int ,int> Particion::obtener_minimo(){
+const std::pair<unsigned int ,int> Particion::obtener_minimo(){
     std::ifstream miArchivo(this->archivo_a_procesar, std::ios::binary);
     unsigned int minimo=0;
     bool primer_elemento = true;
@@ -78,7 +76,7 @@ std::pair<unsigned int ,int> Particion::obtener_minimo(){
 }
 
 
-std::pair<unsigned int ,int> Particion::obtener_suma(){
+const std::pair<unsigned int ,int> Particion::obtener_suma(){
     std::ifstream miArchivo(this->archivo_a_procesar, std::ios::binary);
     unsigned int suma=0;
     for (int i=this->comienzo; i< this->fin; i++){
@@ -92,7 +90,7 @@ std::pair<unsigned int ,int> Particion::obtener_suma(){
     return resultado;
 }
 
-std::pair<unsigned int ,int> Particion::obtener_promedio(){
+const std::pair<unsigned int ,int> Particion::obtener_promedio(){
     std::ifstream miArchivo(this->archivo_a_procesar, std::ios::binary);
     unsigned int suma=0;
     int contador =0;

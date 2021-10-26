@@ -7,7 +7,7 @@ Cola_bloqueante::Cola_bloqueante()
 
 
 
-void Cola_bloqueante::encolar(Particion particion){
+void Cola_bloqueante::encolar(Particion &particion){
     std::unique_lock<std::mutex> uniqueLock(this->m);
     this->cola.push(particion);
     this->var.notify_all();

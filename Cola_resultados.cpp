@@ -18,7 +18,7 @@ void Cola_resultados::agregar_operacion(int id, const std::string &operacion){
     this->operaciones+=1;
 }
 
-void Cola_resultados::imprimir_max(int id_op){
+const void Cola_resultados::imprimir_max(int id_op){
     unsigned int aux=0;
     for (unsigned int i=0; i<this->vector_resultados.size(); i++){
             if (this->vector_resultados.at(i).first == id_op){
@@ -30,7 +30,7 @@ void Cola_resultados::imprimir_max(int id_op){
     std::cout<<aux<<std::endl;
 }
 
-void Cola_resultados::imprimir_min(int id_op){
+const void Cola_resultados::imprimir_min(int id_op){
     unsigned int aux =0;
     bool primer_valor = true;
     for (unsigned int i=0; i<this->vector_resultados.size(); i++){
@@ -49,7 +49,7 @@ void Cola_resultados::imprimir_min(int id_op){
 }
 
 
-void Cola_resultados::imprimir_mean(int id_op){
+const void Cola_resultados::imprimir_mean(int id_op){
     unsigned int suma =0;
     unsigned int contador =0;
     for (unsigned int i=0; i<this->vector_resultados.size(); i++){
@@ -61,7 +61,7 @@ void Cola_resultados::imprimir_mean(int id_op){
     std::cout<<suma<<"/"<<contador<<std::endl;
 }
 
-void Cola_resultados::imprimir_suma(int id_op){
+const void Cola_resultados::imprimir_suma(int id_op){
     unsigned int suma =0;
     for (unsigned int i=0; i<this->vector_resultados.size(); i++){
         if (this->vector_resultados.at(i).first == id_op){
@@ -71,7 +71,7 @@ void Cola_resultados::imprimir_suma(int id_op){
     std::cout<<suma<<std::endl;
 }
 
-void Cola_resultados::imprimir_resultados(){
+const void Cola_resultados::imprimir_resultados(){
     for (int i=0; i<this->operaciones; i++){
         std::string operacion = this->mapa_operaciones[i];
         if (operacion == "sum"){
